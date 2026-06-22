@@ -15,9 +15,9 @@ Un traductor de texto desarrollado en Python que convierte palabras y frases ent
 
 ```text
 ╔══════════════╗
-║   Multicode  ║
-║      by      ║
-║    M.MLabs   ║
+║Español ➡️ ASCII║
+║ASCII ➡️ Español║
+║Español➡️Binario║                 ║Bimario➡️Español║                               ║Salir           ║
 ╚══════════════╝
 ```
 
@@ -30,7 +30,7 @@ Un traductor de texto desarrollado en Python que convierte palabras y frases ent
 
 Este proyecto fue creado para practicar programación en Python, manejo de cadenas, conversión entre bases numéricas y diseño de interfaces en terminal.
 
-## Próximas funciones
+## Próximas funciones (en v.1.2)
 
 * Español ↔ Hexadecimal
 * Copiar resultados al portapapeles
@@ -39,4 +39,4 @@ Este proyecto fue creado para practicar programación en Python, manejo de caden
 
 ---
 
-Hecho con ☕, curiosidad y muchas ganas de aprender.
+Hecho con ☕, curiosidad y muchas ganas de aprender😎 .
