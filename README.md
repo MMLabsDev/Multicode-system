@@ -17,7 +17,7 @@ Un traductor de texto desarrollado en Python que convierte palabras y frases ent
 ╔══════════════╗
 ║Español ➡️ ASCII║
 ║ASCII ➡️ Español║
-║Español➡️Binario║                 ║Bimario➡️Español║                               ║Salir           ║
+║Español➡️Binario║                 ║Bimario➡️Español║                               ║Español➡️Binario║                ║Salir           ║
 ╚══════════════╝
 ```
 
