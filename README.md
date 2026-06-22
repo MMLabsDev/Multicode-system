@@ -1,4 +1,5 @@
 # Multicode-system
+SPDX-License-Identifier: MIT
 
 Un traductor de texto desarrollado en Python que convierte palabras y frases entre distintos formatos de codificación.
 
