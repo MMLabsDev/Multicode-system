@@ -8,7 +8,7 @@ Un traductor de texto desarrollado en Python que convierte palabras y frases ent
 * ASCII → Español
 * Español → Binario
 * Binario → Español
-* Interfaz elegante en terminal usando `rich`
+* Interfaz en terminal usando `rich`
 * Validación básica de entradas
 
 ## Vista previa
@@ -33,10 +33,9 @@ Este proyecto fue creado para practicar programación en Python, manejo de caden
 ## Próximas funciones
 
 * Español ↔ Hexadecimal
-* Historial de conversiones
 * Copiar resultados al portapapeles
-* Tema oscuro
-* Más formatos de codificación
+* Interfaz más pro
+* Más formatos de código
 
 ---
 
