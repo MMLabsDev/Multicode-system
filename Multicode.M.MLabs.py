@@ -1,43 +1,34 @@
 from rich.console import Console
 from rich.table import Table
-print("""
-               ╔══════════════╗
-              ╱              ╱║
-             ╱              ╱ ║
-            ╱══════════════╱  ║
-            ║              ║  ║
-            ║   Multicode  ║  ║
-            ║              ║  ║
-            ║      by      ║  ║
-            ║              ║ ╱
-            ║    M.MLabs   ║╱v.1
-            ╚══════════════╝
-
-""")
 
 
 
 console = Console()
 
-tabla = Table(title="   Traductor de código      ")
+tabla = Table(title="""   Traductor de código \n M.MLabs.Dev   """)
 tabla.add_column("Función")
 tabla.add_column("Herramienta")
 
-tabla.add_row("1","Palabra / Español-ASCII")
-tabla.add_row("2","Palabra / ASCII-Español")
-tabla.add_row("3","Palabra / Español-Binario")
-tabla.add_row("4","Palabra / Binario-Español")
-tabla.add_row("5","Cerrar programa")
+tabla.add_row("1","Español-ASCII")
+tabla.add_row("2","ASCII-Español")
+tabla.add_row("3","Español-Binario")
+tabla.add_row("4","Binario-Español")
+tabla.add_row("5","Español-Hexadecimal")
+tabla.add_row("6","Hexadecimal-Español")
+tabla.add_row("7","Cerrar programa")
+
 console.print(tabla)
-
-
+console.rule("[bold blue]M.MLabs.Dev • V.1.2")
 
 def palabra_a_ASCII():
-    palabra = input("Palabra: ")
-    for letra in palabra:
-        print(ord(letra), end=" ")
+    palabra = input("Texto: ")
 
-    print()
+    ascii_texto = ""
+
+    for letra in palabra:
+        ascii_texto += str(ord(letra)) + " "
+
+    print("ASCII:", ascii_texto)
 
 def ASCII_a_palabra():
     codigo_ascii = input("ASCII: ")
@@ -48,20 +39,39 @@ def ASCII_a_palabra():
     for n in numeros:
         traduccion += chr(int(n))
 
-    print(traduccion)
+    print("Traducción: ", traduccion)
 
 def Palabra_a_Binario():
-    traduccion = input("Palabra: ")
+    traduccion = input("Texto: ")
+    traduccion_bin = ""
 
     for letra in traduccion:
-        print(format(ord(letra),"08b"), end=" ")
+        traduccion_bin += format(ord(letra),"08b") + " "
+
+    print("Binario: ", traduccion_bin)
 
 def Binario_a_Palabra():
     binario = input("Binario: ")
     traduccion = ""
     for b in binario.split():
             traduccion += chr(int(b, 2))
-    print(traduccion)
+
+    print("Traducción: ",traduccion)
+
+def palabra_a_hexadecimal():
+    texto = input("Texto: ")
+
+    hexadecimal = texto.encode("utf-8").hex()
+
+    print("Hexadecimal: ", hexadecimal)
+
+def hexadecimal_a_palabra():
+    texto = input("Hexadecimal: ")
+
+    palabra = bytes.fromhex(texto).decode("utf-8")
+
+    print("Traducción: ", palabra)
+    
             
 
 while True:
@@ -82,6 +92,12 @@ while True:
             Binario_a_Palabra()
 
         elif seleccion == 5:
+            palabra_a_hexadecimal()
+
+        elif seleccion == 6:
+            hexadecimal_a_palabra()
+
+        elif seleccion == 7:
             break
 
         else:
@@ -92,3 +108,4 @@ while True:
     except ValueError:
         print("Ingrese un número válido")
         continue
+
