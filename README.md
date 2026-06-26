@@ -1,4 +1,4 @@
-# Multicode-system V.1.2
+# Multicode-system V.1.3
 SPDX-License-Identifier: MIT
 
 Un traductor de texto desarrollado en Python que convierte palabras y frases entre distintos formatos de codificación.
@@ -9,10 +9,13 @@ Un traductor de texto desarrollado en Python que convierte palabras y frases ent
 * ASCII → Español
 * Español → Binario
 * Binario → Español
-* Español → Hexadecimal `Nuevo`
-* Hexadecimal → Epañol `Nuevo`
+* Español → Hexadecimal
+* Hexadecimal → Epañol
+* Español → Unicode `Nuevo`
+* Unicode → Español `Nuevo`
 * Interfaz en terminal usando `rich`
 * Validación básica de entradas
+* Detector del lenguaje usado (`Beta`)
 
 ## Vista previa
 
@@ -24,6 +27,9 @@ Un traductor de texto desarrollado en Python que convierte palabras y frases ent
 ║Binario➡️Español ║
 ║Español ➡️ Hex   ║
 ║Hex ➡️ Español   ║
+║Español ➡️Unicode║
+║Unicode➡️ Español║
+║Detector de código║
 ║Salir             ║
 ╚══════════════════╝
 ```
@@ -37,13 +43,13 @@ Un traductor de texto desarrollado en Python que convierte palabras y frases ent
 
 Este proyecto fue creado para practicar programación en Python, manejo de cadenas, conversión entre bases numéricas y diseño de interfaces en terminal.
 
-## Próximas funciones (en v.1.3)
+## Próximas funciones (en v.2.0)
 
-* Español ↔ Unicode
+* Adicción de un chatbot básico a la interfaz
 * Copiar resultados al portapapeles
-* Interfaz más limpia
-* Detector de lenguaje usado (Reto)
+* Interfaz más accesible
+* Mejoras en el detector de lenguaje usado (mejoras de compatibilidad).
 
 ---
 
-Hecho con dedicación, curiosidad y muchas ganas de aprender😎 .
+Hecho con desvelo, dedicación y muchas ganas de aprender😎 .
