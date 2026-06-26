@@ -15,10 +15,13 @@ tabla.add_row("3","Español-Binario")
 tabla.add_row("4","Binario-Español")
 tabla.add_row("5","Español-Hexadecimal")
 tabla.add_row("6","Hexadecimal-Español")
-tabla.add_row("7","Cerrar programa")
+tabla.add_row("7","Español-Unicode")
+tabla.add_row("8","Unicode-Español")
+tabla.add_row("9","Detector de código(Beta)")
+tabla.add_row("10","Cerar Programa")
 
 console.print(tabla)
-console.rule("[bold blue]M.MLabs.Dev • V.1.2")
+console.rule("[bold lightblue]M.MLabs.Dev • V.1.3")
 
 def palabra_a_ASCII():
     palabra = input("Texto: ")
@@ -71,8 +74,46 @@ def hexadecimal_a_palabra():
     palabra = bytes.fromhex(texto).decode("utf-8")
 
     print("Traducción: ", palabra)
+
+def palabra_a_unicode():
+    texto = input("Texto: ")
+
+    unicode_texto = ""
+
+    for letra in texto:
+        unicode_texto += f"U+{ord(letra):04X} "
+
+    print("Unicode:", unicode_texto)
+
+def unicode_a_palabra():
+    texto = input("Unicode: ")
+
+    traduccion = ""
+
+    for codigo in texto.split():
+        codigo = codigo.replace("U+", "")
+        traduccion += chr(int(codigo, 16))
+
+    print("Traducción:", traduccion)
+
+def detectar(texto):
+
+
+    if "U+" in texto:
+        return "Unicode"
+
+    elif set(texto) <= {"0","1"," "}:
+        return "Binario"
+
+    elif all(c in "0123456789 " for c in texto):
+        return "ASCII"
+
+    elif all(c in "0123456789ABCDEFabcdef" for c in texto):
+        return "Hexadecimal"
+
+    else:
+        return "Texto normal"
     
-            
 
 while True:
     try:
@@ -98,6 +139,17 @@ while True:
             hexadecimal_a_palabra()
 
         elif seleccion == 7:
+            palabra_a_unicode()
+
+        elif seleccion == 8:
+            unicode_a_palabra()
+
+        elif seleccion == 9:
+            texto = input("Ingrese el código: ")
+            resultado = detectar(texto)
+            print("Formato detectado:", resultado)
+
+        elif seleccion == 10:
             break
 
         else:
