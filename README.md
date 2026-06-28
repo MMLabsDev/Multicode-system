@@ -17,22 +17,9 @@ Un traductor de texto desarrollado en Python que convierte palabras y frases ent
 * Validación básica de entradas
 * Detector del lenguaje usado (`Beta`)
 
-## Vista previa
+## Vista previa:
 
-```text
-╔══════════════════╗
-║Español ➡️ ASCII ║
-║ASCII ➡️ Español ║
-║Español➡️Binario ║
-║Binario➡️Español ║
-║Español ➡️ Hex   ║
-║Hex ➡️ Español   ║
-║Español ➡️Unicode║
-║Unicode➡️ Español║
-║Detector de código║
-║Salir             ║
-╚══════════════════╝
-```
+<img width="1082" height="348" alt="image" src="https://github.com/user-attachments/assets/ba849483-004e-4fdb-8f76-6da390be5293" />
 
 ## Tecnologías usadas
 
