@@ -32,7 +32,7 @@ Este proyecto fue creado para practicar programación en Python, manejo de caden
 
 ## Próximas funciones (en v.2.0)
 
-* Adicción de un chatbot básico a la interfaz
+* Adición de un chatbot básico a la interfaz
 * Copiar resultados al portapapeles
 * Interfaz más accesible
 * Mejoras en el detector de lenguaje usado (mejoras de compatibilidad).
