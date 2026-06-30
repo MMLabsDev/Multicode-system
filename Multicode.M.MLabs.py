@@ -18,7 +18,7 @@ tabla.add_row("6","Hexadecimal-Español")
 tabla.add_row("7","Español-Unicode")
 tabla.add_row("8","Unicode-Español")
 tabla.add_row("9","Detector de código(Beta)")
-tabla.add_row("10","Cerar Programa")
+tabla.add_row("10","Cerrar Programa")
 
 console.print(tabla)
 console.rule("[bold lightblue]M.MLabs.Dev • V.1.3")
