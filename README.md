@@ -5,14 +5,10 @@ Un traductor de texto desarrollado en Python que convierte palabras y frases ent
 
 ## Características
 
-* Español → ASCII
-* ASCII → Español
-* Español → Binario
-* Binario → Español
-* Español → Hexadecimal
-* Hexadecimal → Epañol
-* Español → Unicode
-* Unicode → Español
+* Español ←→ ASCII
+* Español ←→ Binario
+* Español ←→ Hexadecimal
+* Español ←→ Unicode
 * Interfaz en terminal usando `rich`
 * Validación básica de entradas
 * Detector del lenguaje usado (`Beta`)
@@ -20,7 +16,7 @@ Un traductor de texto desarrollado en Python que convierte palabras y frases ent
 
 ## Vista previa:
 
-<img width="953" height="255" alt="image" src="https://github.com/user-attachments/assets/6e154fb9-5c14-4db2-a865-de66595c0ab0" />
+<img width="1088" height="308" alt="image" src="https://github.com/user-attachments/assets/b044c5cb-f4ac-437c-a979-d348519f3d4d" />
 
 
 ## Tecnologías usadas
@@ -35,9 +31,9 @@ Un traductor de texto desarrollado en Python que convierte palabras y frases ent
 
 ## Objetivo
 
-Este proyecto fue creado para practicar programación en Python, manejo de cadenas, conversión entre bases numéricas y diseño de interfaces en terminal usando `Rich`.
+Este proyecto fue creado para practicar programación en Python, manejo de cadenas, conversión entre bases numéricas y diseño de interfaces en terminal usando `Rich` y `Os`.
 
-## Próximas funciones (en v.2.0) `Definitiva`
+## Próximas funciones (en v.2.0)
 
 * Chatbot básico de tareas múltiples
 * Copiar resultados al portapapeles (`Función mejorada`)
