@@ -18,7 +18,7 @@ tabla.add_row("  [3]","Hexadecimal")
 tabla.add_row("  [4]","Unicode")
 tabla.add_row("  [5]","Detector de código(Beta)")
 tabla.add_row("  [6]","Chatbot")
-tabla.add_row("  [7]","Cerar Programa")
+tabla.add_row("  [7]","Cerrar Programa")
 
 #tabla ASCII---------------------------------------------------------------
 
@@ -216,6 +216,14 @@ while True:
 
                 if funcion == 1:
                     Palabra_a_Binario()
+                    option = input("\n¿Copiar? (s/n): ")
+
+                    if option.lower() == "s":
+                        pyperclip.copy(traduccion_bin)
+                        print("Copiado.")
+
+                    elif option.lower() == "n":
+                        continue
 
                 elif funcion == 2:
                     Binario_a_Palabra()
