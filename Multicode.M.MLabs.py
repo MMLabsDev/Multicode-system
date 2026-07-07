@@ -170,7 +170,7 @@ bienvenida = random.choice(bienvenidas)
 while True:
     limpiar()
     console.print(tabla)
-    console.rule("[bold lightblue]M.MLabs.Dev • V.3.0")
+    console.rule("[bold lightblue]M.MLabs.Dev • V.2.0")
 
     try:
         seleccion = int(input("Seleccione función: "))
