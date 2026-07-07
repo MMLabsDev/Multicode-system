@@ -1,7 +1,7 @@
-# Multicode-system V.1.3
+# Multicode-system V.2.0 `Beta`
 SPDX-License-Identifier: MIT
 
-Un traductor de texto desarrollado en Python que convierte palabras y frases entre distintos formatos de codificación.
+Un traductor de texto desarrollado en Python que convierte palabras y frases entre distintos formatos de codificación y viceversa.
 
 ## Características
 
@@ -11,32 +11,39 @@ Un traductor de texto desarrollado en Python que convierte palabras y frases ent
 * Binario → Español
 * Español → Hexadecimal
 * Hexadecimal → Epañol
-* Español → Unicode `Nuevo`
-* Unicode → Español `Nuevo`
+* Español → Unicode
+* Unicode → Español
 * Interfaz en terminal usando `rich`
 * Validación básica de entradas
 * Detector del lenguaje usado (`Beta`)
+* Chatbot (`Beta`)
 
 ## Vista previa:
 
-<img width="1082" height="348" alt="image" src="https://github.com/user-attachments/assets/ba849483-004e-4fdb-8f76-6da390be5293" />
+<img width="953" height="255" alt="image" src="https://github.com/user-attachments/assets/6e154fb9-5c14-4db2-a865-de66595c0ab0" />
+
 
 ## Tecnologías usadas
 
 * Python 3
 * Rich
+* pyperclip `Nuevo`
+
+### Nota:
+* Puede que el programa tenga fallos de compatibilidad en Linux o versiones inferiores a windows 10.
+* Antes de probar el programa, se recomienda asegurarse de que se tenga la última versión de `Rich` y `Pyperclip` instalada en su pc.
 
 ## Objetivo
 
-Este proyecto fue creado para practicar programación en Python, manejo de cadenas, conversión entre bases numéricas y diseño de interfaces en terminal.
+Este proyecto fue creado para practicar programación en Python, manejo de cadenas, conversión entre bases numéricas y diseño de interfaces en terminal usando `Rich`.
 
-## Próximas funciones (en v.2.0)
+## Próximas funciones (en v.2.0) `Definitiva`
 
-* Adición de un chatbot básico a la interfaz
-* Copiar resultados al portapapeles
-* Interfaz más accesible
+* Chatbot básico de tareas múltiples
+* Copiar resultados al portapapeles (`Función mejorada`)
+* Interfaz más limpia y accesible.
 * Mejoras en el detector de lenguaje usado (mejoras de compatibilidad).
 
 ---
 
-Hecho con desvelo, dedicación y muchas ganas de aprender😎 .
+Hecho con esfuerzo, dedicación y muchas ganas de aprender😎.
