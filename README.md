@@ -1,7 +1,7 @@
-# Multicode-system V.2.0 `Beta`
+# Multicode-system V.2.0
 SPDX-License-Identifier: MIT
 
-Un traductor de texto desarrollado en Python que convierte palabras y frases entre distintos formatos de codificación y viceversa.
+Un traductor de texto desarrollado en Python que convierte texto entre distintos formatos de codificación y viceversa.
 
 ## Características
 
@@ -11,7 +11,7 @@ Un traductor de texto desarrollado en Python que convierte palabras y frases ent
 * Español ←→ Unicode
 * Interfaz en terminal usando `rich`
 * Validación básica de entradas
-* Detector del lenguaje usado (`Beta`)
+* Detector del lenguaje usado (`En desarrollo`)
 * Chatbot (`Beta`)
 
 ## Vista previa:
@@ -25,20 +25,20 @@ Un traductor de texto desarrollado en Python que convierte palabras y frases ent
 * Rich
 * pyperclip `Nuevo`
 
-### Nota:
-* Puede que el programa tenga fallos de compatibilidad en Linux o versiones inferiores a windows 10.
-* Antes de probar el programa, se recomienda asegurarse de que se tenga la última versión de `Rich` y `Pyperclip` instalada en su pc.
+###🔖 Nota:
+* Este programa solo ha sido experimentado en versiones mayores a windows 10.
+* Antes de probar el programa, se recomienda asegurarse de que se tenga actalizado e instalado `Rich` y `Pyperclip` en su pc.
 
-## Objetivo
+##💡 Objetivo
 
-Este proyecto fue creado para practicar programación en Python, manejo de cadenas, conversión entre bases numéricas y diseño de interfaces en terminal usando `Rich` y `Os`.
+Este proyecto fue creado para practicar y aprender programación en Python, manejo de cadenas, conversión entre bases numéricas y diseño de interfaces en terminal usando `Rich` y `os`. Aunque no sea un programa tan "útil" a comparación de otros, espero que les sea de ayuda a otros futuros desarrolladores que están empezando al igual que yo.
 
-## Próximas funciones (en v.2.0)
+##✨ Próximas funciones (en v.2.1)
 
-* Chatbot básico de tareas múltiples
-* Copiar resultados al portapapeles (`Función mejorada`)
-* Interfaz más limpia y accesible.
-* Mejoras en el detector de lenguaje usado (mejoras de compatibilidad).
+* Interfaz más moderna.
+* Chatbot más avanzado de tareas múltiples.
+* Interfaz más limpia y accesible con diferentes formatos de texto.
+* Mejoras en el detector de lenguaje usado (mejoras de reconozimiento).
 
 ---
 
