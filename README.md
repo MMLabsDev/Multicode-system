@@ -15,7 +15,6 @@ Un traductor de texto desarrollado en Python que convierte texto entre distintos
 * Chatbot (`Beta`)
 
 ## Vista previa:
-
 <img width="1088" height="308" alt="image" src="https://github.com/user-attachments/assets/b044c5cb-f4ac-437c-a979-d348519f3d4d" />
 
 ## Tecnologías usadas
