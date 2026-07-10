@@ -53,6 +53,10 @@ tabla4.add_column("Traductor")
 tabla4.add_row("  [1]","Epañol - Unicode")
 tabla4.add_row("  [2]","Unicode - Español")
 tabla4.add_row("  [3]","Regresar")
+#tabla Chatbot--------------------------------------------------------------
+tabla5 = Table(title="[bold lightblue]Mia[/bold lightblue]")
+tabla5.add_column("[italic]Multicode Intelligent Assistant[/italic]")
+tabla5.add_row("Hola Usuario!, soy Mia (Multicode intelligent Assistant), Estoy aquí para ayudarte con tus dudas, de momento soy una versión beta, así que de momento no esperes demasiado de mí. Si queres salir de la conversación solo dime 'salir' que yo te entnderé")
 #Crear funciones..................................................................................................................................................
 
 
@@ -92,6 +96,7 @@ def Palabra_a_Binario():
         traduccion_bin += format(ord(letra),"08b") + " "
 
     print("Binario: ", traduccion_bin)
+
     return traduccion_bin
 
 def Binario_a_Palabra():
@@ -170,7 +175,7 @@ bienvenida = random.choice(bienvenidas)
 while True:
     limpiar()
     console.print(tabla)
-    console.rule("[bold lightblue]M.MLabs.Dev • V.2.0")
+    console.rule("[bold lightblue]Multicode-System • V.2.0[/bold lightblue]")
 
     try:
         seleccion = int(input("Seleccione función: "))
@@ -187,17 +192,17 @@ while True:
 
                     if option.lower() == "s":
                         pyperclip.copy(resultado)
-                        print("Copiado.")
+                        console.print(":white_check_mark: Copiado.")
 
                     elif option.lower() == "n":
                         continue
                     
                 elif funcion == 2:
-                    ASCII_a_palabra()
+                    traduccion = ASCII_a_palabra()
                     option = input("\n¿Copiar? (s/n): ")
                     if option.lower() == "s":
                         pyperclip.copy(traduccion)
-                        print("Copiado.")
+                        console.print(":white_check_mark: Copiado.")
 
                     elif option.lower() == "n":
                         continue
@@ -215,18 +220,27 @@ while True:
                 funcion = int(input("#: "))
 
                 if funcion == 1:
-                    Palabra_a_Binario()
+                    resultado_bin = Palabra_a_Binario()
                     option = input("\n¿Copiar? (s/n): ")
 
                     if option.lower() == "s":
-                        pyperclip.copy(traduccion_bin)
-                        print("Copiado.")
+                        pyperclip.copy(resultado_bin)
+                        console.print(":white_check_mark: Copiado.")
+
 
                     elif option.lower() == "n":
                         continue
 
                 elif funcion == 2:
-                    Binario_a_Palabra()
+                    traduccion = Binario_a_Palabra()
+                    option = input("\n¿Copiar? (s/n): ")
+
+                    if option.lower() == "s":
+                        pyperclip.copy(traduccion)
+                        console.print(":white_check_mark: Copiado.")
+
+                    elif option.lower() == "n":
+                        continue
 
                 elif funcion == 3:
                     limpiar()
@@ -241,10 +255,27 @@ while True:
                 funcion = int(input("#: "))
 
                 if funcion == 1:
-                    palabra_a_hexadecimal()
+                    traduccion = palabra_a_hexadecimal()
+                    option = input("\n¿Copiar? (s/n): ")
+
+                    if option.lower() == "s":
+                        pyperclip.copy(traduccion)
+                        console.print(":white_check_mark: Copiado.")
+
+                    elif option.lower() == "n":
+                        continue
 
                 elif funcion == 2:
-                    hexadecimal_a_palabra()
+                    traduccion = hexadecimal_a_palabra()
+                    option = input("\n¿Copiar? (s/n): ")
+
+                    if option.lower == "s":
+                        pyperclip.copy(traduccion)
+                        console.print(":white_check_mark: Copiado.")
+
+
+                    elif option.lower == "n":
+                        continue
 
                 elif funcion == 3:
                     limpiar()
@@ -259,10 +290,28 @@ while True:
                 funcion = int(input("#: "))
 
                 if funcion == 1:
-                    palabra_a_unicode()
+                    traduccion = palabra_a_unicode()
+                    option = input("\n¿Copiar? (s/n): ")
+
+                    if option.lower() == "s":
+                        pyperclip.copy(traduccion)
+                        console.print(":white_check_mark: Copiado.")
+
+
+                    elif option.lower() == "n":
+                        continue
 
                 elif funcion == 2:
-                     unicode_a_palabra()
+                    traduccion = unicode_a_palabra()
+                    option = input("\n¿Copiar? (s/n): ")
+
+                    if option.lower() == "s":
+                        pyperclip.copy(traduccion)
+                        console.print(":white_check_mark: Copiado.")
+
+
+                    elif option.lower() == "n":
+                        continue
 
                 elif funcion == 3:
                     limpiar()
@@ -270,26 +319,38 @@ while True:
                     break
 
            
-
         elif seleccion == 5:
-            texto = input("Ingrese el código: ")
-            resultado = detectar(texto)
-            print("Formato detectado:", resultado)
+            while True:
+                print("\n Escribe exit<> para salir del modo detector")
+                texto = input("Ingrese el código: ")
+                resultado = detectar(texto)
+                print("Formato detectado:", resultado)
+
+                if texto.lower() == "exit<>":
+                    break
 
         elif seleccion == 6:
-            
-            print(saludo)
+            console.print(tabla5)
+            while True:
+                usuario = input("Así que dime...En qué te puedo ayudar hoy?")
 
-            usuario = input(bienvenida)
+                if usuario.lower() == "salir":
+                    break
+                elif usuario.lower() == "ascii":
+                    print("Sí, sé hablar ASCII también, dime, qué quieres traducir?")
+                elif usuario.lower() == "binario":
+                    print("Sí, sé hablar Binario también, dime, qué quieres traducir?")
+                else:
+                    print("ehh...lo siento, no entiendo eso aún")
 
         elif seleccion == 7:
             break
 
         else:
-            print("Opción inválida")
+            console.print("[bold red]Opción inválida[/bold red]")
             continue
 
 
     except ValueError:
-        print("Ingrese un número válido")
+        console.print("[bold red]Ingrese un número válido[/bold red]")
         continue
