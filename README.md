@@ -41,3 +41,12 @@ Este proyecto fue creado para practicar y aprender programación en Python, mane
 ---
 
 Hecho con esfuerzo, dedicación y muchas ganas de aprender😎.
+
+---
+## 🚀 Próximamente
+
+Estoy trabajando en **CiberToolKit**, mi primer toolkit de ciberseguridad desarrollado en Python.
+
+Su objetivo es reunir diferentes utilidades en una sola aplicación, incluyendo **Multicode-System** como uno de sus módulos principales. Este proyecto nace con la intención de seguir aprendiendo sobre programación, redes y ciberseguridad mientras construyo una herramienta cada vez más completa.
+
+⚡ **Más información muy pronto...**
