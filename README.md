@@ -37,7 +37,7 @@ Este proyecto fue creado para practicar y aprender programación en Python, mane
 * Chatbot más avanzado de tareas múltiples.
 * Interfaz más limpia y accesible con diferentes formatos de texto.
 * Mejoras en el detector de lenguaje usado (mejoras de reconozimiento).
-
+* Adición de base 64.
 ---
 
 Hecho con esfuerzo, dedicación y muchas ganas de aprender😎.
