@@ -1,4 +1,4 @@
-# Multicode-system V.2.0
+# Multicode-system V.2.1
 SPDX-License-Identifier: MIT
 
 Un traductor de texto desarrollado en Python que convierte texto entre distintos formatos de codificación y viceversa.
@@ -9,6 +9,7 @@ Un traductor de texto desarrollado en Python que convierte texto entre distintos
 * Español ←→ Binario
 * Español ←→ Hexadecimal
 * Español ←→ Unicode
+* Español ←→ Base64 `Nuevo`
 * Interfaz en terminal usando `rich`
 * Validación básica de entradas
 * Detector del lenguaje usado (`En desarrollo`)
@@ -31,13 +32,12 @@ Un traductor de texto desarrollado en Python que convierte texto entre distintos
 
 Este proyecto fue creado para practicar y aprender programación en Python, manejo de cadenas, conversión entre bases numéricas y diseño de interfaces en terminal usando `Rich` y `os`. Aunque no sea un programa tan "útil" a comparación de otros, espero que les sea de ayuda a otros futuros desarrolladores que están empezando al igual que yo.
 
-##  ✨ Próximas funciones (en v.2.1)
+##  ✨ Próximas funciones (en v.2.2)
 
 * Interfaz más moderna.
 * Chatbot más avanzado de tareas múltiples.
-* Interfaz más limpia y accesible con diferentes formatos de texto.
 * Mejoras en el detector de lenguaje usado (mejoras de reconozimiento).
-* Adición de base 64.
+* Menú con nuevos efectos especiales.
 * Colores más llamativos. 
 ---
 
