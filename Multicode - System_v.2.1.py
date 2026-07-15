@@ -202,7 +202,7 @@ bienvenida = random.choice(bienvenidas)
 while True:
     limpiar()
     console.print(tabla)
-    console.rule("[bold lightblue]Multicode-System • V.2.0[/bold lightblue]")
+    console.rule("[bold lightblue]Multicode-System • V.2.1[/bold lightblue]")
 
     try:
         seleccion = int(input("Seleccione función: "))
