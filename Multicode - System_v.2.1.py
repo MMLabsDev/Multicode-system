@@ -191,13 +191,6 @@ def detectar(texto):
 
     else:
         return "Texto normal"
-
-
-saludos = ["Hola usuario","¿Hey, Qué ondas?", "Bienvenido usuario", "Hello"]
-saludo = random.choice(saludos)
-
-bienvenidas = ["¿En qué puedo ayudarte?: ","¿Qué haremos hoy?: ","Dime: ","¿Qué pasó?"]
-bienvenida = random.choice(bienvenidas)
 #Sistema operativo-----------------------------------------------------------
 while True:
     limpiar()
