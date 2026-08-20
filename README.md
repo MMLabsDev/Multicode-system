@@ -31,11 +31,11 @@ Un traductor de texto desarrollado en Python que convierte texto entre distintos
 
 ## 🔖 Nota:
 * Este programa solo ha sido experimentado en versiones mayores a windows 10.
-* Antes de probar el programa, se recomienda asegurarse de que se tenga actalizado e instalado `Rich` y `Pyperclip` en su pc.
+* Antes de probar el programa, se recomienda asegurarse de que se tenga actalizado e instalado `Pyperclip` en su pc.
 
 ##​  💡 Objetivo
 
-Este proyecto fue creado para practicar y aprender programación en Python, manejo de cadenas, conversión entre bases numéricas y diseño de interfaces en terminal usando `Rich` y `os`. Aunque no sea un programa tan "útil" a comparación de otros, espero que les sea de ayuda a otros futuros desarrolladores que están empezando al igual que yo.
+Este proyecto fue creado para practicar y aprender programación en Python, manejo de cadenas, conversión entre bases numéricas y diseño de interfaces en terminal. Aunque no sea un programa tan "útil" a comparación de otros, espero que les sea de ayuda a otros futuros desarrolladores que están empezando al igual que yo.
 
 ##  ✨ Próximas funciones (en v.3.0)
 
