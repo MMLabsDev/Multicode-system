@@ -1,4 +1,4 @@
-# Multicode-system V.2.1
+# Multicode-system V.3.0 `Beta`
 SPDX-License-Identifier: MIT
 
 Un traductor de texto desarrollado en Python que convierte texto entre distintos formatos de codificación y viceversa.
@@ -9,21 +9,25 @@ Un traductor de texto desarrollado en Python que convierte texto entre distintos
 * Español ←→ Binario
 * Español ←→ Hexadecimal
 * Español ←→ Unicode
-* Español ←→ Base64 `Nuevo`
-* Interfaz en terminal usando `rich`
-* Validación básica de entradas
-* Detector del lenguaje usado (`En desarrollo`)
-* Chatbot (`Beta`)
+* Español ←→ Base64
+* Interfaz simple y moderna en terminal
+* Detector del lenguaje usado (`En mantenimiento`)
+* Chatbot (`En desarrollo`)
 
 ## Vista previa:
-<img width="1090" height="335" alt="image" src="https://github.com/user-attachments/assets/f9302330-7c9c-44b8-ba6f-bb663414c694" />
+<img width="1107" height="500" alt="image" src="https://github.com/user-attachments/assets/f8fbc90f-4247-4491-a15d-3e3e5ed78eff" />
+
 
 
 ## Tecnologías usadas
-
 * Python 3
-* Rich
-* pyperclip `Nuevo`
+* pyperclip
+
+## Novedades:
+- Eliminación de la dependencia a la librería `rich`
+- Cambio radical de estilo
+
+---
 
 ## 🔖 Nota:
 * Este programa solo ha sido experimentado en versiones mayores a windows 10.
@@ -33,16 +37,16 @@ Un traductor de texto desarrollado en Python que convierte texto entre distintos
 
 Este proyecto fue creado para practicar y aprender programación en Python, manejo de cadenas, conversión entre bases numéricas y diseño de interfaces en terminal usando `Rich` y `os`. Aunque no sea un programa tan "útil" a comparación de otros, espero que les sea de ayuda a otros futuros desarrolladores que están empezando al igual que yo.
 
-##  ✨ Próximas funciones (en v.2.2)
+##  ✨ Próximas funciones (en v.3.0)
 
-* Interfaz más moderna.
+* División del proyecto en carpetas.
 * Chatbot más avanzado de tareas múltiples.
 * Mejoras en el detector de lenguaje usado (mejoras de reconozimiento).
 * Menú con nuevos efectos especiales.
-* Colores más llamativos. 
+* Eliminación de dependencias a librerías
 ---
 
-Hecho con esfuerzo, dedicación y muchas ganas de aprender😎.
+Hecho con muchas tazas de café, desvelo, pero muchas ganas de aprender😎.
 
 ---
 ## 🚀 Próximamente
@@ -51,4 +55,4 @@ Estoy trabajando en **CiberToolKit**, mi primer toolkit de ciberseguridad desarr
 
 Su objetivo es reunir diferentes utilidades en una sola aplicación, incluyendo **Multicode-System** como uno de sus módulos principales. Este proyecto nace con la intención de seguir aprendiendo sobre programación, redes y ciberseguridad mientras construyo una herramienta cada vez más completa.
 
-⚡ **Más información muy pronto...**
+⚡ **Más información en MMLABS News**
