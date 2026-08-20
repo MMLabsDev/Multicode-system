@@ -1,75 +1,154 @@
-#importar librerías........................................................................................................................... 
+#importar librerías.......................................................
 import base64
 import time
 import random
 import os
+import re
 import pyperclip
-from rich.console import Console
-from rich.table import Table
+#-------------------------------------------------------------------------
+def menu():
+    print("""
+███╗   ███╗███╗   ███╗██╗      █████╗ ██████╗ ███████╗
+████╗ ████║████╗ ████║██║     ██╔══██╗██╔══██╗██╔════╝
+██╔████╔██║██╔████╔██║██║     ███████║██████╔╝███████╗
+██║╚██╔╝██║██║╚██╔╝██║██║     ██╔══██║██╔══██╗╚════██║
+██║ ╚═╝ ██║██║ ╚═╝ ██║███████╗██║  ██║██████╔╝███████║
+╚═╝     ╚═╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        MULTICODE-SYSTEM • V3.0 "BETA"
+          by M.MLabs.Dev
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━""")
 
-#hacer menú principal.........................................................................................................................
-console = Console()
+menu()
 
-tabla = Table(title="""   Traductor de código \n M.MLabs.Dev   """)
-tabla.add_column("Función")
-tabla.add_column("Herramienta")
+    #--------------------------------------
+    # funciones
+    #--------------------------------------
+def escribir(texto, velocidad=0.01):
+    for caracter in texto:
+        print(caracter, end="", flush=True)
+        time.sleep(velocidad)
+    print()
 
-tabla.add_row("  [1]","ASCII")
-tabla.add_row("  [2]","Binario")
-tabla.add_row("  [3]","Base64")
-tabla.add_row("  [4]","Hexadecimal")
-tabla.add_row("  [5]","Unicode")
-tabla.add_row("  [6]","Detector de código(Beta)")
-tabla.add_row("  [7]","Chatbot")
-tabla.add_row("  [8]","Cerrar Programa")
 
-#tabla ASCII---------------------------------------------------------------
+def crear_tabla(opciones):
+    # ─────────────────────────────────────
+    # Calcular el ancho de cada columna
+    # ─────────────────────────────────────
 
-tabla1 = Table(title="""   Seleccione el tipo de traducción""")
-tabla1.add_column("Función")
-tabla1.add_column("Traductor")
+    ancho_funcion = max(
+        len("Función"),
+        max(len(funcion) for funcion, _ in opciones)
+    )
 
-tabla1.add_row("  [1]","Español - ASCII")
-tabla1.add_row("  [2]","ASCII - Español")
-tabla1.add_row("  [3]","Regresar")
+    ancho_herramienta = max(
+        len("Herramienta"),
+        max(len(herramienta) for _, herramienta in opciones)
+    )
+
+    # Espacios internos
+    ancho_funcion += 2
+    ancho_herramienta += 2
+
+    # ─────────────────────────────────────
+    # Bordes
+    # ─────────────────────────────────────
+
+    superior = (
+        "╔" +
+        "═" * ancho_funcion +
+        "╦" +
+        "═" * ancho_herramienta +
+        "╗"
+    )
+
+    separador = (
+        "╠" +
+        "═" * ancho_funcion +
+        "╬" +
+        "═" * ancho_herramienta +
+        "╣"
+    )
+
+    inferior = (
+        "╚" +
+        "═" * ancho_funcion +
+        "╩" +
+        "═" * ancho_herramienta +
+        "╝"
+    )
+
+    # ─────────────────────────────────────
+    # Tabla
+    # ─────────────────────────────────────
+
+    print(superior)
+
+    print(
+        f"║ {'Función':<{ancho_funcion - 1}}"
+        f"║ {'Herramienta':<{ancho_herramienta - 1}}║"
+    )
+
+    print(separador)
+
+    for funcion, herramienta in opciones:
+        print(
+            f"║ {funcion:<{ancho_funcion - 1}}"
+            f"║ {herramienta:<{ancho_herramienta - 1}}║"
+        )
+
+        time.sleep(0.05)
+
+    print(inferior)
+
+
+# ─────────────────────────────────────────────
+# Opciones
+# ─────────────────────────────────────────────
+
+opciones = [
+    (" [1]", "ASCII"),
+    (" [2]", "Binario"),
+    (" [3]", "Base64"),
+    (" [4]", "Hexadecimal"),
+    (" [5]", "Unicode"),
+    (" [6]", "Detector de código (Beta)"),
+    (" [7]", "Chatbot"),
+    (" [8]", "Cerrar Programa")
+]
+# ─────────────────────────────────────────────
+# Título
+# ─────────────────────────────────────────────
+option_ascii =[
+("  [1]","Español - ASCII"),
+("  [2]","ASCII - Español"),
+("  [3]","Regresar")]
 #tabla de binario----------------------------------------------------------------
-tabla2 = Table(title="""   Seleccione el tipo de traducción""")
-tabla2.add_column("Función")
-tabla2.add_column("Traductor")
-
-tabla2.add_row("  [1]","Español - Binario")
-tabla2.add_row("  [2]","Binario - Español")
-tabla2.add_row("  [3]","Regresar")
+option_bin = [
+("  [1]","Español - Binario"),
+("  [2]","Binario - Español"),
+("  [3]","Regresar")
+]
 #tabla hexadecimal---------------------------------------------------------------
-tabla3 = Table(title=""" Selecione el tipo de traducción""")
-tabla3.add_column("Función")
-tabla3.add_column("Traductor")
-
-tabla3.add_row("  [1]","Epañol - Hexadecimal")
-tabla3.add_row("  [2]","Hexadecimal - Español")
-tabla3.add_row("  [3]","Regresar")
+option_hex = [
+("  [1]","Epañol - Hexadecimal"),
+("  [2]","Hexadecimal - Español"),
+("  [3]","Regresar")]
 #tabla Unicode---------------------------------------------------------------
-tabla4 = Table(title=""" Selecione el tipo de traducción""")
-tabla4.add_column("Función")
-tabla4.add_column("Traductor")
-
-tabla4.add_row("  [1]","Epañol - Unicode")
-tabla4.add_row("  [2]","Unicode - Español")
-tabla4.add_row("  [3]","Regresar")
+option_uni = [
+("  [1]","Epañol - Unicode"),
+("  [2]","Unicode - Español"),
+("  [3]","Regresar")]
 #Tabla base64---------------------------------------------------------------
-tabla6 = Table(title=""" Selecione el tipo de traducción""")
-tabla6.add_column("Función")
-tabla6.add_column("Traductor")
-
-tabla6.add_row("  [1]","Español - Base64")
-tabla6.add_row("  [2]","Base64 - Español")
-tabla6.add_row("  [2]","Regresar")
+option_base = [
+("  [1]","Español - Base64"),
+("  [2]","Base64 - Español"),
+("  [2]","Regresar")]
 #tabla Chatbot--------------------------------------------------------------
-tabla5 = Table(title="[bold lightblue]Mia[/bold lightblue]")
-tabla5.add_column("[italic]Multicode Intelligent Assistant[/italic]")
-tabla5.add_row("Hola Usuario!, soy Mia (Multicode intelligent Assistant), Estoy aquí para ayudarte con tus dudas, de momento soy una versión beta, así que de momento no esperes demasiado de mí. Si queres salir de la conversación solo dime 'salir' que yo te entnderé")
+chat_menu = [
+("[italic]Multicode Intelligent Assistant[/italic]"),
+("Hola Usuario!, soy Mia (Multicode intelligent Assistant), Estoy aquí para ayudarte con tus dudas, de momento soy una versión beta, así que de momento no esperes demasiado de mí. Si queres salir de la conversación solo dime 'salir' que yo te entenderé")]
 #Crear funciones..................................................................................................................................................
-
 
 def limpiar():
     os.system("cls")
@@ -189,19 +268,24 @@ def detectar(texto):
     elif all(c in "0123456789ABCDEFabcdef" for c in texto):
         return "Hexadecimal"
 
+    elif all(c in r'^[A-Za-z0-9+/]+={0,2}$' for c in texto):
+        return "Base 64"
+
     else:
         return "Texto normal"
-#Sistema operativo-----------------------------------------------------------
+
+
+#Sistema ---------------------------------------------------------------------
 while True:
     limpiar()
-    console.print(tabla)
-    console.rule("[bold lightblue]Multicode-System • V.2.1[/bold lightblue]")
-
+    menu()
+    crear_tabla(opciones)
+    
     try:
         seleccion = int(input("Seleccione función: "))
 
         if seleccion == 1:
-            console.print(tabla1)
+            crear_tabla(option_ascii)
 
             while True:
                 funcion = int(input("#:"))
@@ -212,7 +296,7 @@ while True:
 
                     if option.lower() == "s":
                         pyperclip.copy(resultado)
-                        console.print(":white_check_mark: Copiado.")
+                        print("Copiado✓")
 
                     elif option.lower() == "n":
                         continue
@@ -222,19 +306,19 @@ while True:
                     option = input("\n¿Copiar? (s/n): ")
                     if option.lower() == "s":
                         pyperclip.copy(traduccion)
-                        console.print(":white_check_mark: Copiado.")
+                        print("Copiado✓")
 
                     elif option.lower() == "n":
                         continue
                     
                 elif funcion == 3:
                     limpiar()
-                    console.print(tabla)
+                    crear_tabla(opciones)
                     break
 
 
         elif seleccion == 2:
-            console.print(tabla2)
+            crear_tabla(option_bin)
 
             while True:
                 funcion = int(input("#: "))
@@ -245,7 +329,7 @@ while True:
 
                     if option.lower() == "s":
                         pyperclip.copy(resultado_bin)
-                        console.print(":white_check_mark: Copiado.")
+                        print("Copiado✓")
 
 
                     elif option.lower() == "n":
@@ -257,19 +341,19 @@ while True:
 
                     if option.lower() == "s":
                         pyperclip.copy(traduccion)
-                        console.print(":white_check_mark: Copiado.")
+                        print("Copiado✓")
 
                     elif option.lower() == "n":
                         continue
 
                 elif funcion == 3:
                     limpiar()
-                    console.print(tabla)
+                    crear_tabla(opciones)
                     break
                 
 
         elif seleccion == 3:
-            console.print(tabla6)
+            crear_tabla(option_base)
 
             while True:
                 funcion = int(input("#: "))
@@ -280,7 +364,7 @@ while True:
 
                     if option.lower() == "s":
                         pyperclip.copy(codificado)
-                        console.print(":white_check_mark: Copiado.")
+                        print("Copiado✓")
 
                     elif option.lower() == "n":
                         continue
@@ -291,18 +375,18 @@ while True:
 
                     if option.lower() == "s":
                         pyperclip.copy(original)
-                        console.print(":white_check_mark: Copiado.")
+                        print("Copiado✓")
 
                     elif option.lower() == "n":
                         continue
 
                 elif funcion == 3:
                     limpiar()
-                    console.print(tabla)
+                    crear_tabla(opciones)
                     break
                     
         elif seleccion == 4:
-            console.print(tabla3)
+            crear_tabla(option_hex)
 
             while True:
                 funcion = int(input("#: "))
@@ -313,7 +397,7 @@ while True:
 
                     if option.lower() == "s":
                         pyperclip.copy(traduccion)
-                        console.print(":white_check_mark: Copiado.")
+                        print("Copiado✓")
 
                     elif option.lower() == "n":
                         continue
@@ -324,7 +408,7 @@ while True:
 
                     if option.lower() == "s":
                         pyperclip.copy(traduccion)
-                        console.print(":white_check_mark: Copiado.")
+                        print("Copiado.")
 
 
                     elif option.lower == "n":
@@ -332,12 +416,12 @@ while True:
 
                 elif funcion == 3:
                     limpiar()
-                    console.print(tabla)
+                    crear_tabla(opciones)
                     break
 
 
         elif seleccion == 5:
-            console.print(tabla4)
+            crear_tabla(option_uni)
 
             while True:
                 funcion = int(input("#: "))
@@ -348,7 +432,7 @@ while True:
 
                     if option.lower() == "s":
                         pyperclip.copy(traduccion)
-                        console.print(":white_check_mark: Copiado.")
+                        print("Copiado✓")
 
 
                     elif option.lower() == "n":
@@ -360,7 +444,7 @@ while True:
 
                     if option.lower() == "s":
                         pyperclip.copy(traduccion)
-                        console.print(":white_check_mark: Copiado.")
+                        print("Copiado✓")
 
 
                     elif option.lower() == "n":
@@ -368,7 +452,7 @@ while True:
 
                 elif funcion == 3:
                     limpiar()
-                    console.print(tabla)
+                    crear_tabla(opciones)
                     break
 
            
@@ -378,12 +462,13 @@ while True:
                 texto = input("Ingrese el código: ")
                 resultado = detectar(texto)
                 print("Formato detectado:", resultado)
+                print("El detector puede cometer errores")
 
                 if texto.lower() == "exit<>":
                     break
 
         elif seleccion == 7:
-            console.print(tabla5)
+            crear_tabla(chat_menu)
             print("Así que dime...")
             
             while True:
@@ -417,11 +502,14 @@ while True:
                 elif usuario.lower() == "ascii":
                     print("Sí, sé hablar ASCII también, dime, qué quieres traducir?")
 
+                elif "qué es el lenguaje binario" in usuario.lower() or "que es el lenguaje binario" in usuario.lower() or "hablame sobre el lenguaje binario" in usuario.lower():
+                    print("El sistema binario es un sistema de numeración que utiliza únicamente dos dígitos: 0 y 1. Este sistema es la base de la informática moderna, ya que los ordenadores y dispositivos electrónicos procesan y almacenan información utilizando combinaciones de estos dos dígitos. Cada dígito en el sistema binario se denomina bit (contracción de 'binary digit'). Por ejemplo, el número binario 1001 representa un número de 4 bits \n ¿Deseas hacer una traducción?")
+
                 elif usuario.lower() == "binario":
                     print("Sí, sé hablar Binario también, dime, qué quieres traducir?")
 
                 elif usuario.lower() == "salir":
-                    console.print("[bold red]Cerrando chatbot[/bold red]")
+                    print("Cerrando chatbot...")
                     break
 
                 else:
@@ -431,10 +519,10 @@ while True:
             break
 
         else:
-            console.print("[bold red]Opción inválida[/bold red]")
+            print("Opción inválida✕")
             continue
 
 
     except ValueError:
-        console.print("[bold red]Ingrese un número válido[/bold red]")
+        print("Ingrese un número válido")
         continue
