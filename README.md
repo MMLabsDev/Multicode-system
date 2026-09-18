@@ -1,4 +1,4 @@
-# 🧩 MultiCode
+#​ MultiCode
 
 **MultiCode** es un proyecto de Python que comenzó con una idea simple:
 
@@ -62,8 +62,6 @@ MultiCode/
 La idea es simple:
 
 **Cada parte de MultiCode debería tener su propio lugar**
-
-No más lanzar todo en un solo archivo gigante de Python y rezar para que nada se rompa. 💀
 ---
 
 ## 🛠️ Constrido con:
