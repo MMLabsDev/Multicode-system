@@ -1,58 +1,159 @@
-# Multicode-system V.3.0 `Beta`
-SPDX-License-Identifier: MIT
+# 🧩 MultiCode
 
-Un traductor de texto desarrollado en Python que convierte texto entre distintos formatos de codificación y viceversa.
+**MultiCode** es un proyecto de Python que comenzó con una idea simple:
 
-## Características
+> *"¿Y si hago un programa que convierta texto entre diferentes formatos de codificación?"* 🤔
 
-* Español ←→ ASCII
-* Español ←→ Binario
-* Español ←→ Hexadecimal
-* Español ←→ Unicode
-* Español ←→ Base64
-* Interfaz simple y moderna en terminal
-* Detector del lenguaje usado (`En mantenimiento`)
-* Chatbot (`En desarrollo`)
+Y bueno... terminó creciendo más de lo esperado. 😂
 
-## Vista previa:
-<img width="1107" height="500" alt="image" src="https://github.com/user-attachments/assets/f8fbc90f-4247-4491-a15d-3e3e5ed78eff" />
+MultiCode es un conjunto de herramientas de línea de comandos para codificar y decodificar texto usando diferentes formatos como **ASCII, Binario, Hexadecimal, Unicode y Base64**.
 
+El proyecto se está desarrollando actualmente con una arquitectura más modular y escalable, lo que hace que sea más fácil agregar nuevas funciones sin convertir la base de código en un desastre.
 
-
-## Tecnologías usadas
-* Python 3
-* pyperclip
-
-## Novedades:
-- Eliminación de la dependencia a la librería `rich`
-- Cambio radical de estilo
+> 🚧 **Status:** Active development
 
 ---
 
-## 🔖 Nota:
-* Este programa solo ha sido experimentado en versiones mayores a windows 10.
-* Antes de probar el programa, se recomienda asegurarse de que se tenga actalizado e instalado `Pyperclip` en su pc.
+## ⚡ ¿Qué puede hacer MultiCode?
 
-##​  💡 Objetivo
+Actualmente, MultiCode soporta:
 
-Este proyecto fue creado para practicar y aprender programación en Python, manejo de cadenas, conversión entre bases numéricas y diseño de interfaces en terminal. Aunque no sea un programa tan "útil" a comparación de otros, espero que les sea de ayuda a otros futuros desarrolladores que están empezando al igual que yo.
+* 🔤 **ASCII** — Encode and decode text
+* 🔢 **Binary** — Convert text to binary and back
+* 🔷 **Hexadecimal** — Encode and decode hexadecimal
+* 🌐 **Unicode** — Work with Unicode representations
+* 🔐 **Base64** — Encode and decode Base64
+* 📋 **Clipboard support** — Copy results directly
+* 🖥️ **Terminal interface** — Everything runs from the CLI
+* 🧩 **Modular architecture** — Each component has its own job
 
-##  ✨ Próximas funciones (en v.3.0)
+Y hay un par de experimentos en trabajo:
 
-* División del proyecto en carpetas.
-* Chatbot más avanzado de tareas múltiples.
-* Mejoras en el detector de lenguaje usado (mejoras de reconozimiento).
-* Menú con nuevos efectos especiales.
-* Eliminación de dependencias a librerías
+* 🔎 **Detector de Lenguaje** — *In development*
+* 🤖 **Chatbot** — *In development*
+
 ---
 
-Hecho con muchas tazas de café, desvelo, pero muchas ganas de aprender😎.
+## Preview:
+
+<img width="1107" height="500" alt="MultiCode terminal interface" src="https://github.com/user-attachments/assets/f8fbc90f-4247-4491-a15d-3e3e5ed78eff" />
 
 ---
-## 🚀 Próximamente
 
-Estoy trabajando en **CiberToolKit**, mi primer toolkit de ciberseguridad desarrollado en Python.
+## 🏗️ Estructura del proyecto:
 
-Su objetivo es reunir diferentes utilidades en una sola aplicación, incluyendo **Multicode-System** como uno de sus módulos principales. Este proyecto nace con la intención de seguir aprendiendo sobre programación, redes y ciberseguridad mientras construyo una herramienta cada vez más completa.
+Uno de los mayores cambios en esta versión fue pasar de un enfoque de programa único a una estructura de paquetes más organizada.
+```
+MultiCode/
+│
+├── src/
+│   └── multicode/
+│       ├── codecs/
+│       ├── cli/
+│       ├── core/
+│       └── ...
+│
+├── tests/
+├── main.py
+├── pyproject.toml
+└── README.md
+```
 
-⚡ **Más información en MMLABS News**
+La idea es simple:
+
+**Cada parte de MultiCode debería tener su propio lugar**
+
+No más lanzar todo en un solo archivo gigante de Python y rezar para que nada se rompa. 💀
+---
+
+## 🛠️ Constrido con:
+
+* 🐍 Python 3.10+
+* 📋 Pyperclip
+* 🧠 Standard Python libraries
+* 💻 A suspicious amount of terminal usage
+
+---
+
+## 🚀 Arrancando:
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/MMLabsDev/MultiCode.git
+```
+
+### 2. Enter the project
+
+```bash
+cd MultiCode
+```
+
+### 3. Install it in editable mode
+
+```bash
+pip install -e .
+```
+
+### 4. Run MultiCode
+
+```bash
+python main.py
+```
+
+Y eso es todo
+
+Bienvenido a Multicode
+---
+
+## 🧪 ¿Por qué hice esto?
+
+MultiCode comenzó como un pequeño proyecto en Python mientras aprendía a programar.
+Al inicio, la meta era básicamente:
+
+**"Quiero entender cómo funciona la codificación y hacer algo genial con ello"**
+
+Pero a medida que aprendía más sobre Python, el proyecto comenzó a convertirse en un lugar para experimentar con:
+
+* Modular Programmig
+* Python packages
+* Command-line interfaces
+* String manipulation
+* Encoding systems
+* Testing
+* Project architecture
+* Dependency management
+* Git and GitHub
+
+Así que MultiCode ya no se trata solo de convertir texto.
+
+También es mi pequeño laboratorio para aprender cómo se construye el software real🐍
+---
+
+## 🗺️ Ruta
+
+Cosas que me gustaría añadir o mejorar:
+
+* [ ] `multicode` terminal command
+* [ ] Better language detection
+* [ ] More encoding formats
+* [ ] More advanced chatbot
+* [ ] Better CLI experience
+* [ ] More automated tests
+* [ ] Better documentation
+* [ ] More modular tools
+* [ ] Keep cleaning up the code before it becomes spaghetti 🍝
+
+Esta ruta puede cambiar a medida que el proyecto evoluciona. Eso es parte de la diversión.
+---
+
+## ☕ Hecho por MMLabs
+
+MultiCode se desarrolla como parte de **MMLabs**, mi espacio personal para crear proyectos en Python y experimentar con el desarrollo de software.
+Hecho con Python, curiosidad, too many terminal sessions, and probably more coffee than necessary. ☕🐍
+
+---
+
+## 📄 License
+
+MultiCode is licensed under the **MIT License**.
