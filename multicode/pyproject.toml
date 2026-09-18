@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multicode-system"
+version = "3.0.0"
+description = "Sistema de conversión y traducción de diferentes formatos de texto."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Miguel Enrique Martínez Mancía", email = "mmlabs.dev404@gmail.com" }
+]
+license = { text = "MIT" }
+
+[project.scripts]
+multicode = "multicode.app:run"
+
+[tool.setuptools.packages.find]
+where = ["src"]

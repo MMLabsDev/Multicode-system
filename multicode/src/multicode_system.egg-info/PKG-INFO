@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: multicode-system
+Version: 3.0.0
+Summary: Sistema de conversión y traducción de diferentes formatos de texto.
+Author-email: Miguel Enrique Martínez Mancía <mmlabs.dev404@gmail.com>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown

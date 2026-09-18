@@ -1,0 +1,2 @@
+[console_scripts]
+multicode = multicode.app:run
