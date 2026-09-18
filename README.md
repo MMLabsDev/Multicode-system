@@ -23,9 +23,9 @@ Actualmente, MultiCode soporta:
 * 🔷 **Hexadecimal** — Encode and decode hexadecimal
 * 🌐 **Unicode** — Work with Unicode representations
 * 🔐 **Base64** — Encode and decode Base64
-* 📋 **Clipboard support** — Copy results directly
-* 🖥️ **Terminal interface** — Everything runs from the CLI
-* 🧩 **Modular architecture** — Each component has its own job
+* 📋 **Clipboard support** — Copia resultados directamente
+* 🖥️ **Terminal interface** —Todo se ejecuta desde la CLI
+* 🧩 **Modular architecture** — Cada componente tiene su propio trabajo
 
 Y hay un par de experimentos en trabajo:
 
@@ -142,7 +142,7 @@ Cosas que me gustaría añadir o mejorar:
 * [ ] More automated tests
 * [ ] Better documentation
 * [ ] More modular tools
-* [ ] Keep cleaning up the code before it becomes spaghetti 🍝
+* [ ] Keep cleaning up the code
 
 Esta ruta puede cambiar a medida que el proyecto evoluciona. Eso es parte de la diversión.
 ---
@@ -150,7 +150,7 @@ Esta ruta puede cambiar a medida que el proyecto evoluciona. Eso es parte de la 
 ## ☕ Hecho por MMLabs
 
 MultiCode se desarrolla como parte de **MMLabs**, mi espacio personal para crear proyectos en Python y experimentar con el desarrollo de software.
-Hecho con Python, curiosidad, too many terminal sessions, and probably more coffee than necessary. ☕🐍
+Hecho con Python, curiosidad, muchas sesiones de terminal, y probablemente más café del necesario☕🐍
 
 ---
 
