@@ -78,13 +78,13 @@ La idea es simple:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/MMLabsDev/MultiCode.git
+git clone https://github.com/MMLabsDev/Multicode-system
 ```
 
 ### 2. Enter the project
 
 ```bash
-cd MultiCode
+cd Multicode-system
 ```
 
 ### 3. Install it in editable mode
