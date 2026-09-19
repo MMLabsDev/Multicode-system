@@ -65,16 +65,21 @@ git clone https://github.com/MMLabsDev/Multicode-system
 ### 2. Enter the project
 
 ```bash
+cd Multicode-system
+```
+
+### 3. Enter the main file
+```bash
 cd multicode
 ```
 
-### 3. Install it in editable mode
+### 4. Install it in editable mode
 
 ```bash
 pip install -e .
 ```
 
-### 4. Run MultiCode
+### 5. Run MultiCode
 
 ```bash
 python main.py
