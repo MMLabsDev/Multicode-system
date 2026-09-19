@@ -54,41 +54,6 @@ MultiCode/
 - Librería estándar de Python
 
 ---
-
-## 🚀 Instalación y uso
-
-```bash
-git clone https://github.com/MMLabsDev/Multicode-system
-cd Multicode-system
-pip install -e .
-python main.py
-```
-
----
-
-## 🧪 ¿Por qué lo hice?
-
-MultiCode nació como un proyecto de aprendizaje. Con el tiempo se convirtió en mi laboratorio para practicar:
-
-- Programación modular y paquetes de Python
-- Interfaces de línea de comandos
-- Sistemas de codificación y manipulación de cadenas
-- Testing y arquitectura de proyectos
-- Gestión de dependencias, Git y GitHub
-
----
-
-## 🗺️ Hoja de ruta
-
-- [ ] Comando `multicode` disponible desde la terminal
-- [ ] Mejor detección de lenguaje
-- [ ] Más formatos de codificación
-- [ ] Chatbot más avanzado
-- [ ] Mejor experiencia en la CLI
-- [ ] Más pruebas automatizadas
-- [ ] Mejor documentación
-
----
 ## 🚀 Arrancando:
 
 ### 1. Clone the repository
@@ -118,6 +83,31 @@ python main.py
 Y eso es todo
 
 Bienvenido a Multicode
+
+---
+
+## 🧪 ¿Por qué lo hice?
+
+MultiCode nació como un proyecto de aprendizaje. Con el tiempo se convirtió en mi laboratorio para practicar:
+
+- Programación modular y paquetes de Python
+- Interfaces de línea de comandos
+- Sistemas de codificación y manipulación de cadenas
+- Testing y arquitectura de proyectos
+- Gestión de dependencias, Git y GitHub
+
+---
+
+## 🗺️ Hoja de ruta
+
+- [ ] Comando `multicode` disponible desde la terminal
+- [ ] Mejor detección de lenguaje
+- [ ] Más formatos de codificación
+- [ ] Chatbot más avanzado
+- [ ] Mejor experiencia en la CLI
+- [ ] Más pruebas automatizadas
+- [ ] Mejor documentación
+
 ---
 
 ## ☕ Hecho por MMLabs
