@@ -105,10 +105,10 @@ MultiCode nació como un proyecto de aprendizaje. Con el tiempo se convirtió en
 
 ## 🗺️ Hoja de ruta
 
-- [ ] Comando `multicode` disponible desde la terminal
+- [x] Comando `multicode` disponible desde la terminal
 - [ ] Mejor detección de lenguaje
 - [ ] Más formatos de codificación
-- [ ] Chatbot más avanzado
+- [ ] Chatbot más avanzado `(Intentaré crear mi propio modelo de IA)`
 - [ ] Mejor experiencia en la CLI
 - [ ] Más pruebas automatizadas
 - [ ] Mejor documentación
