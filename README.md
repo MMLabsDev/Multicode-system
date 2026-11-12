@@ -52,6 +52,7 @@ MultiCode/
 - Python 3.10+
 - [Pyperclip](https://pypi.org/project/pyperclip/)
 - Librería estándar de Python
+- [Pytest](https://docs.pytest.org/)
 
 ---
 ## 🚀 Arrancando:
