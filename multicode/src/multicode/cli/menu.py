@@ -29,4 +29,4 @@ def menu() -> str:
     """Muestra el logo y la tabla de opciones, y devuelve la selección del usuario."""
     print(LOGO)
     crear_tabla(OPCIONES_PRINCIPALES)
-    return input("\nSelecciona una opción: ")
+    return input("\n > ")
